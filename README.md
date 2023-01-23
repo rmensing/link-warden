@@ -1,3 +1,5 @@
+> Note: I'm doing a full rebuild of this project with much more features... Committing to the [ver3](https://github.com/Daniel31x13/link-warden/tree/ver-3) branch, stay tuned!
+
 <div align="center">
 <h1>
 LinkWarden
@@ -8,7 +10,7 @@ LinkWarden
 
 <a href="https://twitter.com/Daniel31X13" target="_blank" rel="noopener noreferrer"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Daniel31X13?label=twitter&amp;style=social"></a>
 
-![GitHub](https://img.shields.io/github/license/daniel31x13/link-warden?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/link-warden?style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/daniel31x13/link-warden?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/link-warden?style=flat-square) ![Netlify](https://img.shields.io/netlify/31890116-669c-4b1c-844e-fa427503d8bf?style=flat-square) ![GitHub Repo stars](https://img.shields.io/github/stars/daniel31x13/link-warden?style=flat-square)
+![GitHub](https://img.shields.io/github/license/daniel31x13/link-warden?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/link-warden?style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/link-warden?style=flat-square) ![Netlify](https://img.shields.io/netlify/31890116-669c-4b1c-844e-fa427503d8bf?style=flat-square) ![GitHub Repo stars](https://img.shields.io/github/stars/daniel31x13/link-warden?style=flat-square)
 
 </h1>
 
@@ -40,19 +42,27 @@ The objective is to have a self-hosted place to keep useful links in one place, 
 
 * 🗂 Assign each link to a collection where we can further group links.
 
-**Also take a look at our planned features in the [project roadmap section](https://github.com/Daniel31x13/link-warden/wiki#project-roadmap).**
-
 ## Installation
 
-### Using Docker Compose (Recommended)
+### Using Docker Compose V2 (Recommended)
 
 1. Make sure docker is installed.
 
 2. Clone this repository.
 
-4. [Optional] If you want to use this app across the network change `REACT_APP_API_HOST` in docker-compose.yml with the computer IP and API port.
+3. Head to the main folder and run `docker compose up -d`.
 
-3. head to the main folder and run `docker compose up -d`.
+The app will be deployed on port 3000.
+
+### Configuration
+To configure the app create a `.env` file (in the main folder), here are the available variables:
+```
+CLIENT_PORT=2500           # Default: 3000
+API_PORT=5700              # Default: 5500
+API_ADDRESS=192.168.1.14   # Default: localhost
+```
+
+> If you want to use this app across the network set `API_ADDRESS` as the computer (where LinkWarden is hosted) IP address.
 
 ### Manual Setup
 
